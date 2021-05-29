@@ -14,8 +14,21 @@ class BerlinClockViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
+    }
+    
+    func setLampsColor(colors: [UIColor]) {
+        guard let lamps = lamps else { return }
+        UIView.animate(withDuration: 0.3) {
+            self.colorize(colors: colors, lamps: lamps)
+        }
+    }
 
-        // Do any additional setup after loading the view.
+    private func colorize(colors: [UIColor], lamps: [UIView]) {
+        zip(colors, lamps).forEach(generateColor)
+    }
+
+    private func generateColor(for color: UIColor, on view: UIView) {
+        view.backgroundColor = color
     }
 }
 

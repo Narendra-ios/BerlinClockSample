@@ -23,7 +23,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpC-Ye-t1A" userLabel="seconds">
                                                 <rect key="frame" x="141" y="13.5" width="100" height="100"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="seconds"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="GLL-Qg-80I"/>
@@ -36,7 +36,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gpC-Ye-t1A" firstAttribute="centerX" secondItem="QRk-mT-tlv" secondAttribute="centerX" id="HjB-F0-KDO"/>
                                             <constraint firstItem="gpC-Ye-t1A" firstAttribute="centerY" secondItem="QRk-mT-tlv" secondAttribute="centerY" id="wHL-1a-s4M"/>
@@ -281,7 +281,6 @@
                         <outletCollection property="lamps" destination="swJ-tB-WHw" collectionClass="NSMutableArray" id="3ri-0D-eRg"/>
                         <outletCollection property="lamps" destination="TVr-8o-Nt3" collectionClass="NSMutableArray" id="L8z-yg-jQE"/>
                         <outletCollection property="lamps" destination="zeE-OC-3Ix" collectionClass="NSMutableArray" id="aXk-nw-etU"/>
-                        <outletCollection property="lamps" destination="0ow-EY-GLT" collectionClass="NSMutableArray" id="KXb-KL-IBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
