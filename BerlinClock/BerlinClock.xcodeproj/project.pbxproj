@@ -109,9 +109,10 @@
 			children = (
 				D954301C2661075700952B2D /* AppDelegate.swift */,
 				D954301E2661075700952B2D /* SceneDelegate.swift */,
-				D95430202661075700952B2D /* BerlinClockViewController.swift */,
-				D95430522661C44400952B2D /* BerlinClockManager.swift */,
-				D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */,
+				D95430702662B17D00952B2D /* Coordinator */,
+				D95430712662B18600952B2D /* Viewmodel */,
+				D954306C2662B0F100952B2D /* ViewCotroller */,
+				D954306B2662B0E200952B2D /* Utilities */,
 				D95430222661075700952B2D /* Main.storyboard */,
 				D95430252661075A00952B2D /* Assets.xcassets */,
 				D95430272661075A00952B2D /* LaunchScreen.storyboard */,
@@ -138,6 +139,37 @@
 				D95430402661075A00952B2D /* Info.plist */,
 			);
 			path = BerlinClockUITests;
+			sourceTree = "<group>";
+		};
+		D954306B2662B0E200952B2D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D95430522661C44400952B2D /* BerlinClockManager.swift */,
+				D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D954306C2662B0F100952B2D /* ViewCotroller */ = {
+			isa = PBXGroup;
+			children = (
+				D95430202661075700952B2D /* BerlinClockViewController.swift */,
+			);
+			path = ViewCotroller;
+			sourceTree = "<group>";
+		};
+		D95430702662B17D00952B2D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D95430712662B18600952B2D /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
