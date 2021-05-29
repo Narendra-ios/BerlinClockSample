@@ -14,6 +14,7 @@ class BerlinClockCoordinator {
     private let dateProvider = Date()
     private let berlinClockFormatter: BerlinClockFormatter
     private let calendar = Calendar.init(identifier: .gregorian)
+    private var timer: Timer?
 
 
     init() {
@@ -24,6 +25,7 @@ class BerlinClockCoordinator {
     }
     
     func start() -> UIViewController {
+        startTimer()
         return viewController
     }
     
@@ -39,5 +41,17 @@ class BerlinClockCoordinator {
         case BerlinClockFormatter.Style.lightRed: return .systemRed
         default: return .black
         }
+    }
+}
+
+extension BerlinClockCoordinator {
+    
+    func startTimer() {
+        timer = timerFactory.execute(block: updateTime, interval: 1)
+    }
+    
+    func stopTimer() {
+        guard let timer = timer else { return }
+        timerFactory.stop(timer: timer)
     }
 }
