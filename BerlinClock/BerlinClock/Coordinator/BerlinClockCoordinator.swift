@@ -11,11 +11,9 @@ class BerlinClockCoordinator {
     
     private let viewController: BerlinClockViewController
     private let timerFactory = TimerFactoryImplementation()
-    private let dateProvider = Date()
     private let berlinClockFormatter: BerlinClockFormatter
     private let calendar = Calendar.init(identifier: .gregorian)
     private var timer: Timer?
-
 
     init() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -30,7 +28,7 @@ class BerlinClockCoordinator {
     }
     
     func updateTime() {
-        let colors = berlinClockFormatter.time(for: dateProvider).map { colorMapper(for: String($0)) }
+        let colors = berlinClockFormatter.time(for: Date()).map { colorMapper(for: String($0)) }
         viewController.setLampsColor(colors: colors)
     }
 

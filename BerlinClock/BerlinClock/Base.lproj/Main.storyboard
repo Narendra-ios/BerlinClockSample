@@ -281,6 +281,7 @@
                         <outletCollection property="lamps" destination="swJ-tB-WHw" collectionClass="NSMutableArray" id="3ri-0D-eRg"/>
                         <outletCollection property="lamps" destination="TVr-8o-Nt3" collectionClass="NSMutableArray" id="L8z-yg-jQE"/>
                         <outletCollection property="lamps" destination="zeE-OC-3Ix" collectionClass="NSMutableArray" id="aXk-nw-etU"/>
+                        <outletCollection property="lamps" destination="0ow-EY-GLT" collectionClass="NSMutableArray" id="exK-or-i74"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

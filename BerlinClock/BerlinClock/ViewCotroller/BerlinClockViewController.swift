@@ -9,7 +9,7 @@ import UIKit
 
 class BerlinClockViewController: UIViewController {
 
-    @IBOutlet var lamps: [UIView]? = Array(repeating: UIView(), count: 24)
+    @IBOutlet var lamps: [UIView]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,10 @@ class BerlinClockViewController: UIViewController {
 extension BerlinClockViewController {
     
     private func style() {
-        guard (lamps?.removeFirst()) != nil else { return }
-        guard let lamps = lamps else { return }
-        roundCorners(views: lamps, cornerRadius: 10)
+        guard var newLamps = lamps else { return }
+        // dont apply corner radius for secons view
+        newLamps.removeFirst()
+        roundCorners(views: newLamps, cornerRadius: 10)
     }
 
     private func roundCorners(views: [UIView], cornerRadius: CGFloat) {
