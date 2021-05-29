@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D954301D2661075700952B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954301C2661075700952B2D /* AppDelegate.swift */; };
 		D954301F2661075700952B2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954301E2661075700952B2D /* SceneDelegate.swift */; };
-		D95430212661075700952B2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430202661075700952B2D /* ViewController.swift */; };
+		D95430212661075700952B2D /* BerlinClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430202661075700952B2D /* BerlinClockViewController.swift */; };
 		D95430242661075700952B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95430222661075700952B2D /* Main.storyboard */; };
 		D95430262661075A00952B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95430252661075A00952B2D /* Assets.xcassets */; };
 		D95430292661075A00952B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95430272661075A00952B2D /* LaunchScreen.storyboard */; };
@@ -42,7 +42,7 @@
 		D95430192661075700952B2D /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D954301C2661075700952B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D954301E2661075700952B2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D95430202661075700952B2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D95430202661075700952B2D /* BerlinClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockViewController.swift; sourceTree = "<group>"; };
 		D95430232661075700952B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D95430252661075A00952B2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95430282661075A00952B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 			children = (
 				D954301C2661075700952B2D /* AppDelegate.swift */,
 				D954301E2661075700952B2D /* SceneDelegate.swift */,
-				D95430202661075700952B2D /* ViewController.swift */,
+				D95430202661075700952B2D /* BerlinClockViewController.swift */,
 				D95430522661C44400952B2D /* BerlinClockManager.swift */,
 				D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */,
 				D95430222661075700952B2D /* Main.storyboard */,
@@ -270,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D95430212661075700952B2D /* ViewController.swift in Sources */,
+				D95430212661075700952B2D /* BerlinClockViewController.swift in Sources */,
 				D954301D2661075700952B2D /* AppDelegate.swift in Sources */,
 				D954305D2661C74B00952B2D /* BerlinClockFormatter.swift in Sources */,
 				D95430532661C44400952B2D /* BerlinClockManager.swift in Sources */,
