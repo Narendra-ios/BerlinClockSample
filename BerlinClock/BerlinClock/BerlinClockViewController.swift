@@ -23,7 +23,8 @@ extension BerlinClockViewController {
     
     private func style() {
         guard (lamps?.removeFirst()) != nil else { return }
-        roundCorners(views: lamps!, cornerRadius: 10)
+        guard let lamps = lamps else { return }
+        roundCorners(views: lamps, cornerRadius: 10)
     }
 
     private func roundCorners(views: [UIView], cornerRadius: CGFloat) {
