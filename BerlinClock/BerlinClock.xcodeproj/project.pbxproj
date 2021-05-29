@@ -15,6 +15,10 @@
 		D95430292661075A00952B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95430272661075A00952B2D /* LaunchScreen.storyboard */; };
 		D95430342661075A00952B2D /* BerlinClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430332661075A00952B2D /* BerlinClockTests.swift */; };
 		D954303F2661075A00952B2D /* BerlinClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954303E2661075A00952B2D /* BerlinClockUITests.swift */; };
+		D95430532661C44400952B2D /* BerlinClockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430522661C44400952B2D /* BerlinClockManager.swift */; };
+		D95430582661C71600952B2D /* BerlinClockManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430572661C71600952B2D /* BerlinClockManagerTests.swift */; };
+		D954305D2661C74B00952B2D /* BerlinClockFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */; };
+		D95430622661D43700952B2D /* BerlinClockFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430612661D43700952B2D /* BerlinClockFormatterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		D954303A2661075A00952B2D /* BerlinClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BerlinClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D954303E2661075A00952B2D /* BerlinClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockUITests.swift; sourceTree = "<group>"; };
 		D95430402661075A00952B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D95430522661C44400952B2D /* BerlinClockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockManager.swift; sourceTree = "<group>"; };
+		D95430572661C71600952B2D /* BerlinClockManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockManagerTests.swift; sourceTree = "<group>"; };
+		D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockFormatter.swift; sourceTree = "<group>"; };
+		D95430612661D43700952B2D /* BerlinClockFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockFormatterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,8 @@
 				D954301C2661075700952B2D /* AppDelegate.swift */,
 				D954301E2661075700952B2D /* SceneDelegate.swift */,
 				D95430202661075700952B2D /* ViewController.swift */,
+				D95430522661C44400952B2D /* BerlinClockManager.swift */,
+				D954305C2661C74B00952B2D /* BerlinClockFormatter.swift */,
 				D95430222661075700952B2D /* Main.storyboard */,
 				D95430252661075A00952B2D /* Assets.xcassets */,
 				D95430272661075A00952B2D /* LaunchScreen.storyboard */,
@@ -114,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				D95430332661075A00952B2D /* BerlinClockTests.swift */,
+				D95430572661C71600952B2D /* BerlinClockManagerTests.swift */,
+				D95430612661D43700952B2D /* BerlinClockFormatterTests.swift */,
 				D95430352661075A00952B2D /* Info.plist */,
 			);
 			path = BerlinClockTests;
@@ -260,6 +272,8 @@
 			files = (
 				D95430212661075700952B2D /* ViewController.swift in Sources */,
 				D954301D2661075700952B2D /* AppDelegate.swift in Sources */,
+				D954305D2661C74B00952B2D /* BerlinClockFormatter.swift in Sources */,
+				D95430532661C44400952B2D /* BerlinClockManager.swift in Sources */,
 				D954301F2661075700952B2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95430582661C71600952B2D /* BerlinClockManagerTests.swift in Sources */,
+				D95430622661D43700952B2D /* BerlinClockFormatterTests.swift in Sources */,
 				D95430342661075A00952B2D /* BerlinClockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
