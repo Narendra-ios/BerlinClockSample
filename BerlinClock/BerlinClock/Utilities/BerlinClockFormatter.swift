@@ -8,13 +8,9 @@
 import Foundation
 
 final class BerlinClockFormatter {
-        
-    private let berlinClockManager: BerlinClockManager
-    
-    init(calendar: Calendar) {
-        berlinClockManager = BerlinClockManager(calendar: calendar)
-    }
-    
+       
+    // MARK: - Constants
+
     enum ColorCode {
         static let off = "O"
         static let yellow = "Y"
@@ -28,6 +24,18 @@ final class BerlinClockFormatter {
         static let totalSigleMinuteLights = 4
     }
     
+    // MARK: - Private properties
+
+    private let berlinClockManager: BerlinClockManager
+    
+    // MARK: - Object lifeCycle
+
+    init(calendar: Calendar) {
+        berlinClockManager = BerlinClockManager(calendar: calendar)
+    }
+    
+    // MARK: - Internal functions
+
     func secondsLight(for date: Date) -> String {
         berlinClockManager.secondsLamp(for: date) ?  ColorCode.yellow : ColorCode.off
     }
@@ -49,6 +57,8 @@ final class BerlinClockFormatter {
         calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.fiveHourRows(for: date), color: ColorCode.red)
     }
     
+    // MARK: - Private functions
+
     private func calculateLights(total amountOfLights: Int, iluminated: Int, color: String) -> String {
         var lights = ""
         for light in 1...amountOfLights {

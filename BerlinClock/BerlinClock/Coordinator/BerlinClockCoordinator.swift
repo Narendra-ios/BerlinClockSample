@@ -9,11 +9,15 @@ import UIKit
 
 final class BerlinClockCoordinator {
     
+    // MARK: - Private properties
+
     private let viewController: BerlinClockViewController
     private let timerFactory = TimerFactoryImplementation()
     private let berlinClockFormatter: BerlinClockFormatter
     private let calendar = Calendar.init(identifier: .gregorian)
     private var timer: Timer?
+
+    // MARK: - Object lifeCycle
 
     init() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -23,6 +27,8 @@ final class BerlinClockCoordinator {
         berlinClockFormatter = BerlinClockFormatter(calendar: calendar)
     }
     
+    // MARK: - Internal functions
+
     func start() -> UIViewController {
         startTimer()
         return viewController

@@ -10,13 +10,20 @@ import UIKit
 final class BerlinClockViewController: UIViewController {
 
     @IBOutlet var lamps: [UIView]?
+    
+    // MARK: - Private properties
+
     private var viewModel: BerlinClockViewModel?
+    
+    // MARK: - Object lifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         self.title = viewModel?.viewTitle
     }
+    
+    // MARK: - Internal functions
     
     func setup(viewModel: BerlinClockViewModel) {
         self.viewModel = viewModel
@@ -27,6 +34,8 @@ final class BerlinClockViewController: UIViewController {
         /// apply the array of  colors from time string to array of lamp views
         self.colorize(colors: colors, lamps: lamps)
     }
+
+    // MARK: - Private functions
 
     private func colorize(colors: [UIColor], lamps: [UIView]) {
         zip(colors, lamps).forEach(applyColor)

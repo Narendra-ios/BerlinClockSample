@@ -9,17 +9,25 @@ import Foundation
 
 final class BerlinClockManager {
     
+    // MARK: - Constants
+
     private enum Constants {
         static let sizeofMinuteBlocks = 5
         static let sizeofHourBlocks = 5
     }
     
+    // MARK: - Private properties
+
     private let calendar: Calendar
     
+    // MARK: - Object lifeCycle
+
     init(calendar: Calendar) {
         self.calendar = calendar
     }
     
+    // MARK: - Internal functions
+
     func secondsLamp(for date: Date) -> Bool {
         seconds(from: date) % 2 == 0
     }
@@ -47,6 +55,8 @@ final class BerlinClockManager {
 
 extension BerlinClockManager {
     
+    // MARK: - Private functions
+
     private func seconds(from date: Date) -> Int {
         calendar.component(.second, from: date)
     }
