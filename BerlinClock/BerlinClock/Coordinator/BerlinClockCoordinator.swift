@@ -19,6 +19,7 @@ class BerlinClockCoordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard
             .instantiateViewController(withIdentifier: "Clock") as! BerlinClockViewController
+        viewController.setup(viewModel: BerlinClockViewModel())
         berlinClockFormatter = BerlinClockFormatter(calendar: calendar)
     }
     

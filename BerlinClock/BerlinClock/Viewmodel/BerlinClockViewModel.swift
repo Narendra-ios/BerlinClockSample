@@ -9,4 +9,11 @@ import Foundation
 
 struct BerlinClockViewModel {
     
+    private enum Title {
+        static let viewTitle = "Berlin Clock"
+    }
+    
+    var viewTitle: String {
+        Title.viewTitle
+    }
 }

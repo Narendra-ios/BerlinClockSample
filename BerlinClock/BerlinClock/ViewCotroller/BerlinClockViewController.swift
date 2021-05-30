@@ -10,15 +10,21 @@ import UIKit
 class BerlinClockViewController: UIViewController {
 
     @IBOutlet var lamps: [UIView]?
-
+    private var viewModel: BerlinClockViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
+        self.title = viewModel?.viewTitle
+    }
+    
+    func setup(viewModel: BerlinClockViewModel) {
+        self.viewModel = viewModel
     }
     
     func setLampsColor(colors: [UIColor]) {
         guard let lamps = lamps else { return }
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.1) {
             self.colorize(colors: colors, lamps: lamps)
         }
     }
