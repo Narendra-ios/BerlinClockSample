@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BerlinClockFormatter {
+final class BerlinClockFormatter {
         
     private let berlinClockManager: BerlinClockManager
     
@@ -15,10 +15,10 @@ class BerlinClockFormatter {
         berlinClockManager = BerlinClockManager(calendar: calendar)
     }
     
-    enum Style {
-        static let lightOff = "O"
-        static let lightYellow = "Y"
-        static let lightRed = "R"
+    enum ColorCode {
+        static let off = "O"
+        static let yellow = "Y"
+        static let red = "R"
     }
     
     private enum Constants {
@@ -29,30 +29,30 @@ class BerlinClockFormatter {
     }
     
     func secondsLight(for date: Date) -> String {
-        berlinClockManager.secondsLamp(for: date) ?  Style.lightYellow : Style.lightOff
+        berlinClockManager.secondsLamp(for: date) ?  ColorCode.yellow : ColorCode.off
     }
     
     func singleMinuteLights(for date: Date) -> String {
-        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.singleMinuteRows(for: date), color: Style.lightYellow)
+        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.singleMinuteRows(for: date), color: ColorCode.yellow)
     }
     
     func fiveMinuteLights(for date: Date) -> String {
-        let minutes = calculateLights(total: Constants.totalFiveMinuteLights, iluminated: berlinClockManager.fiveMinutesRows(for: date), color: Style.lightYellow)
+        let minutes = calculateLights(total: Constants.totalFiveMinuteLights, iluminated: berlinClockManager.fiveMinutesRows(for: date), color: ColorCode.yellow)
         return addVisualAid(to: minutes)
     }
     
     func singleHourLights(for date: Date) -> String {
-        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.singleHourRows(for: date), color: Style.lightRed)
+        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.singleHourRows(for: date), color: ColorCode.red)
     }
     
     func fiveHourLights(for date: Date) -> String {
-        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.fiveHourRows(for: date), color: Style.lightRed)
+        calculateLights(total: Constants.totalSigleMinuteLights, iluminated: berlinClockManager.fiveHourRows(for: date), color: ColorCode.red)
     }
     
     private func calculateLights(total amountOfLights: Int, iluminated: Int, color: String) -> String {
         var lights = ""
         for light in 1...amountOfLights {
-            lights += light > iluminated ? Style.lightOff : color
+            lights += light > iluminated ? ColorCode.off : color
         }
         return lights
     }
@@ -61,8 +61,8 @@ class BerlinClockFormatter {
         var lights = ""
         for (index, char) in minutes.enumerated() {
             // apply red color for every iluminated 3rd light
-            let shouldApplyRed = berlinClockManager.isMultipleOf3(number: index + 1) && String(char) != Style.lightOff
-            lights += shouldApplyRed ? Style.lightRed : String(char)
+            let shouldApplyRed = berlinClockManager.isMultipleOf3(number: index + 1) && String(char) != ColorCode.off
+            lights += shouldApplyRed ? ColorCode.red : String(char)
         }
         return lights
     }

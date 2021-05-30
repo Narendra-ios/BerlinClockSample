@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BerlinClockCoordinator {
+final class BerlinClockCoordinator {
     
     private let viewController: BerlinClockViewController
     private let timerFactory = TimerFactoryImplementation()
@@ -28,6 +28,8 @@ class BerlinClockCoordinator {
         return viewController
     }
     
+    /// convert each charecter from time string into UIColor
+    /// ex: "YROY" will be converted into [.systemYellow, .systemRed, .black.withAlphaComponent(0.2),  .systemYellow]
     func updateTime() {
         let colors = berlinClockFormatter.time(for: Date()).map { colorMapper(for: String($0)) }
         viewController.setLampsColor(colors: colors)
@@ -35,9 +37,9 @@ class BerlinClockCoordinator {
 
     func colorMapper(for string: String) -> UIColor {
         switch string {
-        case BerlinClockFormatter.Style.lightOff: return UIColor.black.withAlphaComponent(0.2)
-        case BerlinClockFormatter.Style.lightYellow: return .systemYellow
-        case BerlinClockFormatter.Style.lightRed: return .systemRed
+        case BerlinClockFormatter.ColorCode.off: return UIColor.black.withAlphaComponent(0.2)
+        case BerlinClockFormatter.ColorCode.yellow: return .systemYellow
+        case BerlinClockFormatter.ColorCode.red: return .systemRed
         default: return .black
         }
     }
