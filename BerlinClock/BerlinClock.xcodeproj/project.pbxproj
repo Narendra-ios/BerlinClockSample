@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94CDB0D26641B22007CC19C /* BerlinClockCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94CDB0C26641B22007CC19C /* BerlinClockCoordinatorTests.swift */; };
 		D954301D2661075700952B2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954301C2661075700952B2D /* AppDelegate.swift */; };
 		D954301F2661075700952B2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D954301E2661075700952B2D /* SceneDelegate.swift */; };
 		D95430212661075700952B2D /* BerlinClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95430202661075700952B2D /* BerlinClockViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D94CDB0C26641B22007CC19C /* BerlinClockCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlinClockCoordinatorTests.swift; sourceTree = "<group>"; };
 		D95430192661075700952B2D /* BerlinClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BerlinClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D954301C2661075700952B2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D954301E2661075700952B2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				D95430572661C71600952B2D /* BerlinClockManagerTests.swift */,
 				D95430612661D43700952B2D /* BerlinClockFormatterTests.swift */,
 				D954308A2662BB8500952B2D /* TimerFactoryImplementationTets.swift */,
+				D94CDB0C26641B22007CC19C /* BerlinClockCoordinatorTests.swift */,
 				D95430352661075A00952B2D /* Info.plist */,
 			);
 			path = BerlinClockTests;
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95430582661C71600952B2D /* BerlinClockManagerTests.swift in Sources */,
+				D94CDB0D26641B22007CC19C /* BerlinClockCoordinatorTests.swift in Sources */,
 				D95430622661D43700952B2D /* BerlinClockFormatterTests.swift in Sources */,
 				D954308B2662BB8500952B2D /* TimerFactoryImplementationTets.swift in Sources */,
 			);

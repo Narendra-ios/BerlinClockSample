@@ -33,7 +33,7 @@ class BerlinClockCoordinator {
         viewController.setLampsColor(colors: colors)
     }
 
-    private func colorMapper(for string: String) -> UIColor {
+    func colorMapper(for string: String) -> UIColor {
         switch string {
         case BerlinClockFormatter.Style.lightOff: return UIColor.black.withAlphaComponent(0.2)
         case BerlinClockFormatter.Style.lightYellow: return .systemYellow
